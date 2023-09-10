@@ -1,0 +1,17 @@
+<html>
+    {% load static %}
+    <head>
+        <title> form doc</title>
+    </head>
+    <body>
+        <h1>Hai WElcome</h1>
+
+        <form method = 'post'>
+            {{form.as_p}}
+            {% csrf_token %}
+            <input type= 'submit' value = 'Submit/Accept' />
+
+        </form>
+           
+    </body>
+</html>

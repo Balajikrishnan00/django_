@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+{% extends 'crudApp/base.html' %}
+{% load static %}
+{% block content %}
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/studentstyle.css'%}">
+    <title>Student Results</title>
+
+</head>
+<body>
+    <h1>Student Results</h1>
+    <table class="result-table">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>City</th>
+        </tr>
+        {% for i in list %}
+        {{i.studentID}}
+        {% endfor %}        
+                <!-- Add more rows for other students -->
+    </table>
+
+    <a href="/create/">
+        Add New
+    </a>
+
+</body>
+{% endblock %}
+</html>

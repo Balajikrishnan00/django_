@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'crudapp/create.html' %}
+    <head>
+        <title> form doc</title>
+    </head>
+    <body>
+    {% block content %}
+        <h1>Employee Details View</h1>
+    <table border="1">
+        <tr>
+            <th>No</th>
+            <th>Employee ID</th>
+            <th>Employee Name</th>
+            <th>Employee Salary</th>
+        </tr>
+        <tr>
+            {% if form %}
+            {% for i in form %}
+            <td>{{i.id}}</td>
+            <td>{{i.empID}}</td>
+            <td>{{i.empName}}</td>
+            <td>{{i.empSalary}}</td>
+            <td> <a href="/edit/{{i.id}}">Edit</a></td>
+            <td> <a href="/delete/{{i.id}}">Remove</a></td>
+        </tr>
+            {% endfor %}
+            {% endif %}
+        </table>
+        <a href="/create">
+           <button>Add New Student</button>
+        </a>
+    {% endblock %}
+
+    </body>
+</html>

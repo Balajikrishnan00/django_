@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Website</title>
+    <link rel="stylesheet" href="{% static 'css/empdesign.css'%}">
+    
+
+</head>
+<body>
+    <header>
+        <h1>Employee Information</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="employee">
+            <h2>Employee Profile</h2>
+            <img src="images/profile.jpg" alt="Employee Photo">
+            
+            {% if  emp_list%}
+            {% for emp in emp_list %}
+            
+            {{emp.empNo}}
+            {{emp.empName}}
+            {{emp.empSalary}}
+            {{emp.empAddress}}
+
+            
+            {% endfor %}
+            {% endif %}
+            
+            
+            <!-- Add more employee information here -->
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Employee Website</p>
+    </footer>
+</body>
+</html>

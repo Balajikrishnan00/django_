@@ -1,0 +1,31 @@
+<htm>
+    {% extends 'crudapp/base.html' %}
+    <head><title>  </title></head>
+    <body>
+        {% block content %}
+
+        <h1>Student Details</h1>
+        <table>
+            <thead>
+                <th>ID</th>
+                <th>Student No.</th>
+                <th>Student Name</th>
+                <th>Student Class</th>
+                <th>Student Address</th>
+            </thead>
+            {% for s in students %}
+            <tr>
+            
+            <td>{{s.id}}</td>
+            <td>{{s.studentNo}}</td>
+            <td>{{s.studentName}}</td>
+            <td>{{s.studentClass}}</td>
+            <td>{{s.studentAddress}}</td>
+            {% endfor %}
+            </tr>
+        </table>
+        <a href="#"><button tupe="button">
+        {% endblock  %}
+        
+    </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% extends 'crudapp/base.html' %}
+    <meta charset="UTF-8">
+    <title>Update</title>
+</head>
+<body>
+{% block content %}
+<div id="d1" align="center">
+  <form method="post">
+    {% csrf_token %}
+  <p>Employee ID : <input type = 'text' name = 'empID'  value = {{emp_data.empID}}></p>
+  <p>Employee Name : <input type = 'text' name = 'empName'  value = {{emp_data.empName}}></p>
+  <p>Employee Salary : <input type = 'text' name = 'empSalary'  value = {{emp_data.empSalary}}></p>
+  <p><input type = "submit" value = "Update"></p>
+  </form>
+</div>
+{% endblock %}
+
+</body>
+</html>
